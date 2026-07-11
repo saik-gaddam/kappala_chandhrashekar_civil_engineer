@@ -65,7 +65,7 @@ nav {
     font-size: 13px;
 }
 
-.nav-links ul li::after {
+.nav-links-ul-li::after {
     color: red;
     content: '';
     width: 0%;
@@ -76,7 +76,7 @@ nav {
     transition: 0.5s;
 }
 
-.nav-links ul li:hover::after {
+.nav-links-ul-li:hover::after {
     width: 100%;
 }
 
