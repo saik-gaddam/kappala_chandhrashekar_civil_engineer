@@ -32,11 +32,18 @@ header nav a {
 }
 
 header nav ul {
-    list-style-type: none; /* Removes the dots */
+    flex: 1;
+    text-align: right;
+}
+
+header nav ul li{
+    list-style-type: none;
+    display: inline-block;/* Removes the dots */
     padding: 0;
     margin: 0;
     display: flex;         /* Makes the items align horizontally */
-    gap: 20px;             /* Adds space between the links */
+    gap: 20px;
+    position: relative;/* Adds space between the links */
 }
 
 header nav a:hover {
