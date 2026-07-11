@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Booking</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     <nav>
@@ -13,5 +15,25 @@
     </nav>
     <h1>Booking</h1>
     <p>Fill out the form below to book a consultation.</p>
+
+    <form id="bookingForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="date">Select Appointment Date:</label>
+  <input type="text" id="appointmentDate" name="date" placeholder="Click to select date" required>
+
+  <button type="submit">Book Appointment</button>
+</form>
+
+<script>
+  // Initialize the calendar
+  flatpickr("#appointmentDate", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+  });
+</script>
+    
 </body>
 </html>
