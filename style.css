@@ -11,7 +11,7 @@ body { font-family: 'Segoe UI', sans-serif; margin: 0;}
 header {color: white; padding: 3rem; text-align: center; }
 
 nav {
-    background: white;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
