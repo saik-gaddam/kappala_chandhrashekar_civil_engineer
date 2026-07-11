@@ -26,6 +26,17 @@ header nav a {
     font-weight: bold;
     transition: color 0.3s;
     margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none; /* Removes the dots */
+    padding: 0;
+    margin: 0;
+    display: flex;         /* Makes the items align horizontally */
+    gap: 20px;             /* Adds space between the links */
 }
 
 header nav a:hover {
