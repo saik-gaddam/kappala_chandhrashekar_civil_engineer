@@ -1,7 +1,8 @@
 .bg {
-    background-image: url("chandhrashekar_portfolio/assets/bg.jpg")
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(chandhrashekar_portfolio/assets/bg.jpg);
+    background-position: center;
     bakground-size: cover;
-    height: 100vh
+    min-height: 100vh
 }
 
 body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
