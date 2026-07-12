@@ -108,6 +108,7 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     cursor: pointer;
     font-size: 24px;
     color: #000;
+    padding: 10px;
 }
 
 /* Mobile responsiveness */
@@ -125,7 +126,7 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
         position: absolute;
         top: 60px; /* Adjust based on your nav height */
         left: 0;
-        background: #333;
+        background: #fff;
     }
 
     .nav-links.active {
@@ -133,7 +134,10 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     }
 
     .nav-links ul {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        list-style: none;
+        padding: 0;
     }
 }
