@@ -113,7 +113,10 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show hamburger on mobile */
+        display: block !important; /* Forces visibility */
+        position: absolute;
+        top: 15px; /* Adjust vertical position */
+        right: 20px; /* Aligns to the right */
     }
 
     .nav-links {
