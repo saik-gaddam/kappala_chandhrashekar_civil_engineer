@@ -42,3 +42,10 @@ emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
     user_email: document.getElementById('email').value,
     booking_date: document.getElementById('date').value
 });
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
