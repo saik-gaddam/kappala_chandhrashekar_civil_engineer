@@ -37,8 +37,15 @@ nav a {
 }
 
 .nav-links {
-    flex: 1;
+    flex: 0 1 auto;
     text-align: right;
+}
+
+.nav-links ul {
+    display: flex; /* Ensures the list items (Home, About, etc.) stay in a row */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links ul li{
@@ -47,7 +54,8 @@ nav a {
     margin: 0;
     display: inline-block;         /* Makes the items align horizontally */
     gap: 20px;
-    position: relative;/* Adds space between the links */
+    position: relative;
+    margin-left: 20px;/* Adds space between the links */
 }
 
 .nav-links ul li a {
