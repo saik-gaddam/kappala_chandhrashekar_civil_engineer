@@ -149,3 +149,8 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
         padding: 0;
     }
 }
+
+.main-img {
+    height: 100px;
+    width: 100px;
+}
