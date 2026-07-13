@@ -1,5 +1,5 @@
 .bg {
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(chandhrashekar_portfolio/assets/bg.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/bg.jpg);
     background-position: center;
     bakground-size: cover;
     min-height: 100vh
