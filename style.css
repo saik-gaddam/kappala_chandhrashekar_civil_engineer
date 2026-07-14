@@ -167,7 +167,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     bakground-size: cover;
     background: center;
     height: 100vh;
-    position: relative;
 }
 
 .bg-project {
@@ -175,7 +174,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     bakground-size: cover;
     background: center;
     height: 100vh;
-    position: relative;
 }
 
 .bg-contact {
@@ -183,7 +181,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     bakground-size: cover;
     background: center;
     height: 100vh;
-    position: relative;
 }
 
 .bg-booking {
@@ -191,7 +188,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     bakground-size: cover;
     background: center;
     height: 100vh;
-    position: relative;
 }
 
 .logo { margin: 0; font-size: 1.5rem; font-weight: 800; color: var(--primary-color); }
