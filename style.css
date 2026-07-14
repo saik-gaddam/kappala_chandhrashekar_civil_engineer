@@ -3,6 +3,7 @@
     bakground-size: cover;
     background: center;
     height: 100vh
+    position: relative;
 }
 
 body { font-family: 'Segoe UI', sans-serif; margin: 0;}
@@ -165,30 +166,32 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/bg-2.jpg);
     bakground-size: cover;
     background: center;
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
 
 .bg-project {
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/bg-3.jpg);
     bakground-size: cover;
     background: center;
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
 
 .bg-contact {
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/contact.jpg);
     bakground-size: cover;
     background: center;
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
 
 .bg-booking {
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/appointment.jpg);
     bakground-size: cover;
     background: center;
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
 
-.logo {
-    text: 200px;
-}
+.logo { margin: 0; font-size: 1.5rem; font-weight: 800; color: var(--primary-color); }
