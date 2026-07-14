@@ -35,17 +35,6 @@ header {
     align-items: center; 
 }
 
-#mobile-menu {
-    display: block !important;
-    color: #ffffff !important; /* Forces white color */
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -133,6 +122,17 @@ section {
     #hero {
         display: flex;
         flex-direction: column;
+    }
+
+    #mobile-menu {
+        display: block !important;
+        color: #ffffff !important; /* Forces white color */
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
     }
     
     .nav-links {
