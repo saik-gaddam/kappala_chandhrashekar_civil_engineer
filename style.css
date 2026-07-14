@@ -14,7 +14,6 @@ p {
 }
 
 nav {
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +27,7 @@ a {
 }
 
 nav a {
-    color: black;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -59,7 +58,7 @@ nav a {
 }
 
 .nav-links ul li a {
-    color: black;
+    color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
