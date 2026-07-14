@@ -211,8 +211,8 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
 }
 
  .knowmore-button {
-       background: transparent !important;          /* Makes the background see-through */
-        border: 2px solid #ffffff !important;       /* White border (adjust color as needed) */
+       background: transparent !important;   /* Makes the background see-through */
+        border: outline 2px solid #ffffff !important;       /* White border (adjust color as needed) */
         color: #ffffff !important;                  /* Text color */
         padding: 12px 24px;              /* Space inside the button */
         font-size: 16px;
