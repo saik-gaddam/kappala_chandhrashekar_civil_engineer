@@ -203,7 +203,7 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     height: 100vh;
 }
 
-    knowmore-button {
+ .knowmore-button {
         display: inline-block;
         text-decoration: none;
         color: #fff;
