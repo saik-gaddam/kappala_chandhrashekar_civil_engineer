@@ -121,6 +121,7 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .menu-toggle {
+        color: #fff;
         display: block !important; /* Forces visibility */
         position: absolute;
         top: 20px; /* Adjust vertical position */
@@ -129,7 +130,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
 
     .nav-links {
         display: none; /* Hide menu by default */
-        align-item: right;
         width: 100%;
         position: absolute;
         top: 60px; /* Adjust based on your nav height */
@@ -148,6 +148,18 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
         text-align: center;
         list-style: none;
         padding: 0;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-img {
+        height: 180px;
+        width: 180px;
+        border-radius: 10px;
+        border: 5px;
     }
 }
 
@@ -183,3 +195,6 @@ header { padding: 2rem 5%; display: flex; justify-content: space-between; align-
     height: 100vh;
 }
 
+.logo {
+    font-size: 200px;
+}
