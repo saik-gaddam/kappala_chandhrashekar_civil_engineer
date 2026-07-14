@@ -11,54 +11,56 @@
     <div class="bg-booking">
         <div>
             <nav>
-            <div>
-                <a href="index.html" class="logo">KCS</a>
-            </div>
+                <div>
+                    <a href="index.html" class="logo">KCS</a>
+                </div>
     
     <!-- This button must be inside the <nav> -->
-            <div>
-                <div class="menu-toggle" id="mobile-menu">
-                &#9776; <!-- This is the hamburger icon symbol -->
-            </div>
+                <div>
+                    <div class="menu-toggle" id="mobile-menu">
+                    &#9776; <!-- This is the hamburger icon symbol -->
+                </div>
             
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html">Book Appointment</a></li>
-                </ul>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="d-flex flex-row justify-content-center">
+                <h1>Booking</h1>
+                <p>Fill out the form below to book a consultation.</p>
             </div>
-        </nav>
-    <div class="d-flex flex-row justify-content-center">
-        <h1>Booking</h1>
-        <p>Fill out the form below to book a consultation.</p>
 
-    <form id="bookingForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
  
-        <label for="date">Select Appointment Date:</label>
-        <input type="text" id="appointmentDate" name="date" placeholder="Click to select date" required>
+                <label for="date">Select Appointment Date:</label>
+                <input type="text" id="appointmentDate" name="date" placeholder="Click to select date" required>
 
-        <button type="submit">Book Appointment</button>
-     </form>
+                <button type="submit">Book Appointment</button>
+             </form>
 
-<script>
+            <script>
   // Initialize the calendar
-  flatpickr("#appointmentDate", {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-    minDate: "today"
-  });
-</script>
+                  flatpickr("#appointmentDate", {
+                    enableTime: true,
+                    dateFormat: "Y-m-d H:i",
+                    minDate: "today"
+                  });
+            </script>
 
-<div id="confirmation-message" style="display: none; padding: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
-    Booking Confirmed! A civil engineer will reach out to you shortly via email.
-</div>
+            <div id="confirmation-message" style="display: none; padding: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
+                Booking Confirmed! A civil engineer will reach out to you shortly via email.
+            </div>
         </div>
     </div>
     
