@@ -119,29 +119,31 @@ section {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block !important;
-        color: #fff;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-
     .nav-links {
-        display: none;
+        display: none; 
         width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
-        background: #fff;
+        background: #ffffff; /* White background */
+        z-index: 1000; /* Ensure it stays on top */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .nav-links.active { display: block; }
-    .nav-links ul { flex-direction: column; text-align: center; }
+    .nav-links.active {
+        display: block;
+    }
 
-    .main-img {
-        height: 150px;
-        width: 150px;
+    /* FIX: Change link color to black so they are visible on the white background */
+    .nav-links ul li a {
+        color: #333 !important; 
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding: 20px;
     }
 }
