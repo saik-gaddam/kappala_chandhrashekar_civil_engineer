@@ -3,20 +3,20 @@
  * Handles: Mobile Menu, Smooth Scroll, and Hover Effects
  */
 
-// Toggle Mobile Menu
-const menuToggle = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
-menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navList.classList.remove('active');
-    });
-});
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            // Toggles the 'active' class on the nav list
+            navList.classList.toggle('active');
+            
+            // Optional: Toggle a class on the hamburger itself for animation
+            menuToggle.classList.toggle('is-open');
+        });
+    }
+});;
 
 document.addEventListener('DOMContentLoaded', () => {
     
