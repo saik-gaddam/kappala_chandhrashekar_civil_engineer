@@ -256,57 +256,85 @@ main {
 /* Container & Centering */
 .bg-project {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white;
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
 
-/* Heading Animations */
-h1 {
-    font-size: 3rem;
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.header-section h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
     animation: fadeInDown 1s ease-out;
 }
 
-/* Grid for 3 Projects */
+.header-section p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Responsive Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin-top: 50px;
+    width: 100%;
+    max-width: 1100px;
 }
 
-/* Project Cards with staggered animation */
+/* Animated Project Cards */
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     opacity: 0;
     animation: slideUp 0.8s ease forwards;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.project-card:nth-child(3) { animation-delay: 0.6s; }
+/* Staggered Animation Delay */
+.project-card:nth-child(1) { animation-delay: 0.3s; }
+.project-card:nth-child(2) { animation-delay: 0.5s; }
+.project-card:nth-child(3) { animation-delay: 0.7s; }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    .projects-grid { grid-template-columns: 1fr; }
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.12);
 }
 
-/* Keyframes */
+/* Animation Keyframes */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
+    from { opacity: 0; transform: translateY(-40px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(50px); }
+    from { opacity: 0; transform: translateY(60px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .bg-project { padding-top: 100px; }
+    .projects-grid { grid-template-columns: 1fr; }
 }
