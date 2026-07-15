@@ -14,61 +14,77 @@
 <body>
 
     <div class="bg">
-        <nav>
-            <div>
+        <nav class="navbar px-4">
+            <div class="logo-container">
                 <a href="index.html" class="logo">KCS</a>
             </div>
     
-    <!-- This button must be inside the <nav> -->
-            <div class="menu-toggle" id="mobile-menu">
-                 &#9776; <!-- This is the hamburger icon symbol -->
-            </div>
-            
-            <div class="nav-links">
+    <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <div class="nav-links" id="nav-list">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="booking.html" class="cta-nav">Book Appointment</a></li>
                 </ul>
-            </div>
-        </nav>
-    
+              </div>
+          </nav>
+        
         <main>
-            <section id="hero">
-                <div class="d-flex flex-row">
-                    <div>
-                        <h1>Civil Engineer | Structural Design & Site Management</h1>
-                        <a href="about.html" class="knowmore-button">Know More</a>
-                    </div>
-                    <div>
-                        <img src="./assets/hero-2.jpg" class="main-img" alt="Kappala Chandhrashekar - Civil Engineering Projects" />
-                    </div>
-                </div>
-            </section>
+            <section id="hero" class="hero-container">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Civil Engineer | Structural Design & Site Management</h1>
+            <p>Specializing in Digital Land Surveys, Planning, and modern engineering solutions for complex projects.</p>
+            <a href="about.html" class="btn-transparent">Know More</a>
+        </div>
+        <div class="hero-image">
+            <img src="./assets/hero-2.jpg" alt="Kappala Chandhrashekar" class="floating-animation">
+        </div>
+    </div>
+</section>
 
-            <section id="projects">
-                <h2>Featured Projects</h2>
-                <div class="project-grid">
-                    <div class="card">
-                        <h3>Project Name</h3>
-                        <p>Briefly describe the challenge and your engineering solution here.</p>
-                    </div>
-                </div>
-             </section>
+            <div class="project-card animate-on-hover">
+    <div class="project-info">
+        <h3>Project Name</h3>
+        <p>Briefly describe the challenge and your engineering solution here.</p>
+        <span class="view-project">View Details →</span>
+    </div>
+</div>
          </main>
     </div>
 
-    <footer>
-            <div class="social-links">
-                <p>Follow us on</p>
-                <a href="https://www.instagram.com/kcs_digitalsurveys_planners" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/919160253086"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="https://youtube.com/@kcsdigitallandsurveysplannings?si=U4LPDYTycHLblo79"><i class="fab fa-youtube"></i></a>
+    <footer class="footer">
+    <div class="footer-grid">
+        <!-- Contact Section -->
+        <div class="footer-section">
+            <h4>Get In Touch</h4>
+            <div class="contact-group">
+                <a href="tel:+919160253086" class="contact-item"><i class="fas fa-phone"></i> +91 9160253086</a>
+                <a href="https://wa.me/919160253086" class="contact-item whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
-            <p>&copy; 2026 Civil Engineering Portfolio</p>
-    </footer>
+        </div>
+
+        <!-- Social Section -->
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links-container">
+                <a href="https://www.instagram.com/kcs_digitalsurveys_planners" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@kcsdigitallandsurveysplannings" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Civil Engineering Portfolio | All Rights Reserved</p>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
