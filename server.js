@@ -1,21 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Wait for the whole page to load
+window.onload = function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
 
-    if (mobileMenu && navList) {
-        mobileMenu.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevents the click from closing immediately
-            navList.classList.toggle('active');
-            mobileMenu.classList.toggle('open');
-            console.log("Menu toggled!"); // You can check this in the console (F12)
-        });
-
-        // Optional: Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !navList.contains(e.target)) {
-                navList.classList.remove('active');
+    if (mobileMenu) {
+        mobileMenu.onclick = function() {
+            // Toggle the 'active' class on the menu list
+            if (navList.style.display === "block") {
+                navList.style.setProperty("display", "none", "important");
                 mobileMenu.classList.remove('open');
+            } else {
+                navList.style.setProperty("display", "block", "important");
+                mobileMenu.classList.add('open');
             }
-        });
+        };
     }
-});
+
+    // Ensure all social links open in new tabs
+    const links = document.querySelectorAll('.social-icons a, .footer-contact-group a');
+    links.forEach(link => {
+        if (link.href.includes('http')) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
+};
