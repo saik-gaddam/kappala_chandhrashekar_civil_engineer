@@ -354,20 +354,17 @@ main {
 
                                               /* Below code is belong to booking.html */
 
-/* Glassmorphism Card Style */
-.glass-form-card {
+.booking-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
-.text-gradient {
-    background: linear-gradient(90deg, #4cc9f0, #4361ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.booking-card h2 {
+    color: #4cc9f0;
     font-weight: 700;
 }
 
@@ -375,33 +372,29 @@ main {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    border-radius: 10px;
     padding: 12px;
 }
 
-.form-control:focus, .form-select:focus {
+.form-control:focus {
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border-color: #4cc9f0;
-    box-shadow: 0 0 10px rgba(76, 201, 240, 0.3);
 }
 
-.submit-btn {
+.booking-btn {
+    width: 100%;
     background: linear-gradient(90deg, #4cc9f0, #4361ee);
     border: none;
     color: white;
     padding: 15px;
-    border-radius: 50px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.4);
+.booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.4);
 }
 
-/* Label color */
-.form-label { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
