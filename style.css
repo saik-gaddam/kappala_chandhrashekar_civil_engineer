@@ -71,11 +71,28 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
     .hero-flex-container { flex-direction: column; text-align: center; }
     .menu-toggle { display: flex; }
     .nav-links { display: none; width: 100%; position: absolute; top: 70px; left: 0; background: #222; padding: 20px; z-index: 100; }
-    .nav-links.active {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
     .nav-links ul { flex-direction: column; }
     .nav-links ul li { margin: 10px 0; }
+
+    @media (max-width: 768px) {
+    /* Add these inside the bracket */
+    .menu-toggle {
+        display: flex; /* Shows the 3 lines only on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hidden until you click the menu */
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #222;
+        z-index: 1000;
+    }
+
+    /* This is the key part that makes it show up when you click */
+    .nav-links.active {
+        display: block !important;
+    }
+}
 }
