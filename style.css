@@ -355,6 +355,17 @@ main {
 
                                               /* Below code is belong to booking.html */
 
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+
 .appointment-booking {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/appointment.jpg'); /* ADD IMAGE LINK HERE */
     background-size: cover;
@@ -403,6 +414,32 @@ main {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(76, 201, 240, 0.4);
 }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show the hamburger on mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: rgba(17, 17, 17, 0.95); /* Dark background */
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show when active class is added via JS */
+    }
+    .reveal-text { font-size: 2rem; }
+    .timeline { margin-left: 10px; padding-left: 20px; }
+    .timeline-dot { left: -31px; }
+}
+
 
 
                                           /* Below code is belong to About.html */
@@ -572,6 +609,7 @@ main {
     }
 
     .nav-menu {
+        display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
