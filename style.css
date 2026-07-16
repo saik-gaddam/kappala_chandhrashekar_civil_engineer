@@ -38,20 +38,20 @@ nav {
     text-decoration: none;
 }
 
-.nav-links ul {
+.nav-menu {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-.nav-links ul li a {
+.nav-menu li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
     transition: 0.3s;
 }
 
-.nav-links ul li a:hover, .nav-links ul li a.active {
+.nav-menu li a:hover, .nav-menu li a.active {
     color: #4cc9f0;
 }
 
@@ -165,26 +165,40 @@ main {
     cursor: pointer;
 }
 
-.menu-toggle .bar {
+.bar {
     width: 30px;
     height: 3px;
     background: white;
+    transition: 0.4s;
     border-radius: 2px;
 }
 
 @media (max-width: 992px) {
-   .nav-links.active {
-        display: block; /* Show when active class is added by JS */
-        position: absolute;
-        top: 60px;
+   .nav-menu.active {
         left: 0;
-        width: 100%;
-        background: #000;
     }
     .menu-toggle {
-        display: block; /* Make sure the bars are visible */
+        display: flex; /* Make sure the bars are visible */
         cursor: pointer;
     }
+
+     .nav-menu {
+        position: fixed;
+        left: -100%; /* Hidden off-screen */
+        top: 80px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.4s ease;
+        padding: 50px 0;
+        gap: 30px;
+    }
+
+
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
     .nav-links { display: none; }
 
