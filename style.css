@@ -1,268 +1,92 @@
-/* ==========================================
-   1. LUXURY THEME VARIABLES
-   ========================================== */
+/* General Styles */
 :root {
-    --glow-primary: #00f2ff;
-    --glow-secondary: #7000ff;
-    --dark-surface: #050505;
-    --card-gradient: linear-gradient(145deg, rgba(20,20,25,0.9), rgba(10,10,15,0.95));
-    --transition-smooth: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #ffffff;
 }
 
 body {
-    background-color: var(--dark-surface);
-    color: #f0f0f0;
-    cursor: default; /* Recommended: Add a custom circular cursor via JS */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background: fixed center/cover no-repeat; /* Background image link placeholder */
+  background-color: #1a1a1a;
+  min-height: 100vh;
 }
 
-/* ==========================================
-   2. INTERACTIVE MOUSE GLOW (Dynamic)
-   ========================================== */
-/* Apply this class to your main background container */
-.dynamic-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 50% 50%, rgba(112, 0, 255, 0.05), transparent 40%),
-        radial-gradient(circle at 80% 20%, rgba(0, 242, 255, 0.05), transparent 30%);
-    z-index: -1;
-    animation: bgPulse 10s infinite alternate;
+/* Glassmorphism Container */
+.container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes bgPulse {
-    0% { transform: scale(1); opacity: 0.5; }
-    100% { transform: scale(1.2); opacity: 0.8; }
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* ==========================================
-   3. ULTRA-MODERN NAVIGATION
-   ========================================== */
-.navbar {
-    padding: 25px 8%;
-    transition: var(--transition-smooth);
+.nav-links {
+  display: flex;
+  list-style: none;
 }
 
-.navbar:hover {
-    background: rgba(0,0,0,0.6);
-    padding: 15px 8%; /* Squeezes slightly on scroll/hover */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
 }
 
-.nav-menu li a {
-    position: relative;
-    padding: 10px 15px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-}
+.nav-links li a:hover { color: var(--accent-color); }
 
-/* Underline Animation */
-.nav-menu li a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 1px;
-    background: var(--glow-primary);
-    transition: var(--transition-smooth);
-}
+/* Hamburger Menu (Mobile) */
+.hamburger { display: none; cursor: pointer; }
+.bar { width: 25px; height: 3px; background: white; margin: 5px; transition: 0.4s; }
 
-.nav-menu li a:hover::before {
-    width: 100%;
-    left: 0;
-}
-
-/* ==========================================
-   4. BENTO-BOX PROJECT GRID (Modern)
-   ========================================== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6-column grid for complex layouts */
-    grid-auto-rows: 200px;
-    gap: 20px;
-    padding: 60px 8%;
-}
-
-.project-card {
-    grid-column: span 3; /* Default: Half width */
-    background: var(--card-gradient);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-}
-
-/* Hover: The Glow Border Effect */
-.project-card::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    background: linear-gradient(45deg, transparent, var(--glow-primary), var(--glow-secondary), transparent);
-    z-index: -1;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.project-card:hover::after { opacity: 1; }
-.project-card:hover { transform: translateY(-10px) rotateX(5deg); }
-
-/* Bento Variation */
-.project-card:nth-child(1) { grid-column: span 4; grid-row: span 2; } /* Large Featured */
-.project-card:nth-child(2) { grid-column: span 2; grid-row: span 1; } /* Small */
-
-/* ==========================================
-   5. NEON NEUMORPHIC BUTTONS
-   ========================================== */
-.knowmore-button {
-    background: transparent;
-    border: 1px solid var(--glow-primary);
-    color: var(--glow-primary);
-    text-shadow: 0 0 10px var(--glow-primary);
-    box-shadow: inset 0 0 10px var(--glow-primary), 0 0 15px var(--glow-primary);
-    padding: 18px 45px;
-    border-radius: 12px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 4px;
-    transition: 0.4s;
-}
-
-.knowmore-button:hover {
-    background: var(--glow-primary);
-    color: #000;
-    box-shadow: 0 0 40px var(--glow-primary);
-    transform: scale(1.05);
-}
-
-/* ==========================================
-   6. RESPONSIVE DESIGN (All Screens)
-   ========================================== */
-
-/* Mobile (< 768px) */
-@media (max-width: 767px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Single column */
-        grid-auto-rows: auto;
-    }
-    
-    .project-card { grid-column: span 1 !important; grid-row: span 1 !important; }
-
-    .hero-text-box h1 { font-size: 2.8rem; }
-}
-
-/* Tablet (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .project-card { grid-column: span 1 !important; }
-}
-
-/* Large Screens (1440px+) */
-@media (min-width: 1440px) {
-    .container { max-width: 1600px; margin: 0 auto; }
-}
-
-/* ==========================================
-   7. STYLISH SCROLLBAR
-   ========================================== */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #050505; }
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--glow-secondary), var(--glow-primary));
-    border-radius: 10px;
-}
-
-
-
-
-/* ==========================================
-   1. GLOBAL BACKGROUND BASE
-   ========================================== */
-/* Apply this class to the main wrapper or <body> of every page */
-.page-bg-container {
-    min-height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect for "Interest" */
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-}
-
-/* THE MAGIC OVERLAY: Makes text pop and adds "Style" */
-.page-bg-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg, 
-        rgba(10, 10, 15, 0.9) 0%, 
-        rgba(10, 10, 15, 0.4) 50%, 
-        rgba(10, 10, 15, 0.8) 100%
-    );
-    z-index: -1;
-}
-
-/* ==========================================
-   2. INDIVIDUAL PAGE BACKGROUNDS
-   ========================================== */
-
-/* INDEX / HOME PAGE */
-.index-page {
-    background-image: url(''); /* ADD HOME IMAGE LINK HERE */
-    animation: zoomEffect 20s infinite alternate; /* Subtle moving background */
-}
-
-/* PROJECTS PAGE */
-.projects-page {
-    background-image: url(''); /* ADD PROJECTS IMAGE LINK HERE */
-}
-
-/* BOOK APPOINTMENT PAGE */
-.booking-page {
-    background-image: url(''); /* ADD APPOINTMENT IMAGE LINK HERE */
-    /* Add a subtle blue tint for trust */
-    box-shadow: inset 0 0 100px rgba(0, 242, 255, 0.1);
-}
-
-/* ABOUT PAGE */
-.about-page {
-    background-image: url(''); /* ADD ABOUT IMAGE LINK HERE */
-}
-
-/* ==========================================
-   3. ATTRACTIVE ANIMATIONS & EFFECTS
-   ========================================== */
-
-/* Cinematic Zoom Effect for Home Page */
-@keyframes zoomEffect {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
-
-/* Smooth Fade-in when page loads */
-.page-bg-container {
-    animation: fadeInPage 1.5s ease-in-out;
-}
-
-@keyframes fadeInPage {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* ==========================================
-   4. RESPONSIVE BACKGROUND ADJUSTMENTS
-   ========================================== */
-
-/* For Mobile: Disable fixed attachment for better performance */
 @media (max-width: 768px) {
-    .page-bg-container {
-        background-attachment: scroll;
-        background-position: 70% center; /* Adjusts focus for narrow screens */
-    }
+  .hamburger { display: block; }
+  .nav-links {
+    display: none; /* Toggle this class with JS */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+  }
+  .nav-links.active { display: flex; }
 }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer & Social Icons */
+footer {
+  padding: 2rem;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: white;
+  margin: 0 10px;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.social-icons a:hover { transform: scale(1.2); color: #25d366; /* WhatsApp Green */ }
