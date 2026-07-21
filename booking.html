@@ -132,7 +132,7 @@
                 </div>
 
                 <!-- Form State -->
-                <form action="https://api.web3forms.com/submit" method="POST" @submit="submitted = true" class="space-y-6">
+                <form action="https://api.web3forms.com/submit" method="POST" x-show="!submitted" @submit="submitted = true" class="space-y-6">
     
     <!-- Replace with your actual Web3Forms Access Key -->
     <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
