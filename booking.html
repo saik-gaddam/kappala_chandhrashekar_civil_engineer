@@ -54,7 +54,7 @@
                     <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-amber-400 transition-colors">Home</a>
                     <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-amber-400 transition-colors">About</a>
                     <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-amber-400 transition-colors">Projects</a>
-                    <a href="booking.html" class="px-3 py-2 rounded-md text-sm font-medium text-amber-400 transition-colors">Booking</a>
+                    <a href="booking.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-amber-400 transition-colors">Booking</a>
                     <a href="booking.html" class="ml-4 px-5 py-2.5 rounded-lg text-sm font-semibold bg-amber-600 text-white hover:bg-amber-500 shadow-md hover:shadow-amber-600/30 transition-all transform hover:-translate-y-0.5">
                         Hire Me
                     </a>
@@ -131,51 +131,54 @@
                     </button>
                 </div>
 
-                <!-- Form State -->
+                <!-- Form State with Web3Forms Integration -->
                 <form action="https://api.web3forms.com/submit" method="POST" x-show="!submitted" @submit="submitted = true" class="space-y-6">
-    
-    <!-- Replace with your actual Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    
+                    <!-- Replace YOUR_WEB3FORMS_ACCESS_KEY with your access key obtained from web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    
+                    <!-- Optional: Customize subject line of the email you receive -->
+                    <input type="hidden" name="subject" value="New Civil Engineering Appointment Booking!">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Your Full Name</label>
-            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="John Doe">
-        </div>
-        <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="john@example.com">
-        </div>
-    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Your Full Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="john@example.com">
+                        </div>
+                    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
-            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="+91 98765 43210">
-        </div>
-        <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Service Type</label>
-            <select name="service_type" class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm">
-                <option>Structural Design Consultation</option>
-                <option>Site Supervision & Quality Check</option>
-                <option>Residential Estimation & Planning</option>
-                <option>Commercial Project Review</option>
-            </select>
-        </div>
-    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="+91 98765 43210">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Service Type</label>
+                            <select name="service_type" class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm">
+                                <option>Structural Design Consultation</option>
+                                <option>Site Supervision & Quality Check</option>
+                                <option>Residential Estimation & Planning</option>
+                                <option>Commercial Project Review</option>
+                            </select>
+                        </div>
+                    </div>
 
-    <div>
-        <label class="block text-sm font-semibold text-slate-700 mb-2">Project Details & Requirements</label>
-        <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="Briefly describe your project scope, location, and timeline..."></textarea>
-    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Project Details & Requirements</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm" placeholder="Briefly describe your project scope, location, and timeline..."></textarea>
+                    </div>
 
-    <!-- Optional Bot Protection HoneyPot -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <!-- Bot Protection Honeypot -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <button type="submit" class="w-full py-4 bg-amber-600 text-white font-bold rounded-xl shadow-lg shadow-amber-600/30 hover:bg-amber-500 transition-all text-center">
-        Confirm & Submit Booking Request
-    </button>
-</form>
+                    <button type="submit" class="w-full py-4 bg-amber-600 text-white font-bold rounded-xl shadow-lg shadow-amber-600/30 hover:bg-amber-500 transition-all text-center">
+                        Confirm & Submit Booking Request
+                    </button>
+                </form>
 
             </div>
         </div>
@@ -202,48 +205,13 @@
     </footer>
 
     <!-- AOS Animation Library Initialization Script -->
-    <!-- Include EmailJS SDK before your closing body tag -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript">
-    (function() {
-        // REPLACE WITH YOUR ACTUAL EMAILJS PUBLIC KEY
-        emailjs.init("YOUR_PUBLIC_KEY");
-    })();
-
-    function handleBookingForm(event) {
-        event.preventDefault();
-        
-        const form = event.target;
-        const submitButton = form.querySelector('button[type="submit"]');
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending Request...";
-
-        // Map form inputs to EmailJS template variables
-        const templateParams = {
-            from_name: form.querySelector('input[placeholder="John Doe"]').value,
-            from_email: form.querySelector('input[placeholder="john@example.com"]').value,
-            phone: form.querySelector('input[type="tel"]').value,
-            service_type: form.querySelector('select').value,
-            message: form.querySelector('textarea').value
-        };
-
-        // REPLACE WITH YOUR ACTUAL EMAILJS SERVICE ID AND TEMPLATE ID
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                // Access Alpine.js state to toggle success screen
-                Alpine.evaluate(form, 'submitted = true');
-                form.reset();
-                submitButton.disabled = false;
-                submitButton.textContent = "Confirm & Submit Booking Request";
-            }, function(error) {
-                console.log('FAILED...', error);
-                alert("Oops! Something went wrong while sending your appointment request. Please try again.");
-                submitButton.disabled = false;
-                submitButton.textContent = "Confirm & Submit Booking Request";
-            });
-    }
-</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800
+        });
+    </script>
 </body>
 </html>
