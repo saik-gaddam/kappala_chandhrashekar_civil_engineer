@@ -1,3 +1,18 @@
+
+<nav>
+    <div class="logo">CIVIL<span>ENGINEER</span></div>
+    <!-- Hamburger Icon using FontAwesome -->
+    <div class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="booking.html">Booking</a></li>
+    </ul>
+</nav>
+
 <main class="container">
     <h2>About Me</h2>
     <img src="" alt="Professional Profile" class="profile-img">
@@ -12,3 +27,21 @@
     <h3>Education</h3>
     <p>Bachelor of Science in Civil Engineering - [University Name]</p>
 </main>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        menuBtn.classList.toggle('open');
+        
+        // Toggle between Bars and Cross icon
+        const icon = menuBtn.querySelector('i');
+        if(navLinks.classList.contains('open')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
+    });
+</script>
