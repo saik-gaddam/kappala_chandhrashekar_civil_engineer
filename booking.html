@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Appointment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="page-bg-container booking-page">
-        <nav class="navbar">
-            <a href="index.html" class="logo">CIVIL<span>ENG</span></a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="booking.html" class="active">Booking</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-
-        <div class="container">
-            <div class="booking-card" style="max-width: 600px; margin: 100px auto;">
-                <h2>Schedule a Consultation</h2>
-                <form>
-                    <input type="text" placeholder="Full Name" class="form-control" style="width:100%; margin:10px 0;">
-                    <input type="email" placeholder="Email Address" class="form-control" style="width:100%; margin:10px 0;">
-                    <button type="submit" class="booking-btn">Submit Request</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+<main class="container">
+    <h2>Book an Appointment</h2>
+    <!-- Use Formspree.io for easy email notifications without a backend -->
+    <form action="https://formspree.io/f/your-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="details" placeholder="Project Details"></textarea>
+        <button type="submit">Submit Appointment</button>
+    </form>
+</main>
